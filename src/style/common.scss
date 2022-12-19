@@ -1,0 +1,399 @@
+/** 信息框 -S */
+.twbg-backbox-info {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  padding: 1rem;
+
+  .backbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .top {
+      position: absolute;
+      float: left;
+      width: 100%;
+      height: 22px;
+
+      .top-left {
+        position: absolute;
+        float: left;
+        width: 88px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+
+      .top-mid {
+        float: left;
+        position: absolute;
+        left: 88px;
+        right: 90px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+
+      .top-rig {
+        float: right;
+        width: 90px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+    }
+
+    .mid {
+      position: absolute;
+      float: left;
+      width: 100%;
+      top: 22px;
+      bottom: 22px;
+
+      .mid-left {
+        position: absolute;
+        float: left;
+        width: 88px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+
+      .mid-mid {
+        float: left;
+        position: absolute;
+        left: 88px;
+        right: 90px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+
+      .mid-rig {
+        float: right;
+        width: 90px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+    }
+
+    .bot {
+      position: absolute;
+      float: left;
+      width: 100%;
+      height: 22px;
+      bottom: 0;
+
+      .bot-left {
+        position: absolute;
+        float: left;
+        width: 88px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+
+      .bot-mid {
+        float: left;
+        position: absolute;
+        left: 88px;
+        right: 90px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+
+      .bot-rig {
+        float: right;
+        width: 90px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+    }
+  }
+
+  .tw-back-box__header {
+    height: 28px;
+    color: $twBackBoxColor;
+    font-size: 18px;
+  }
+}
+
+.twbg-backbox-info {
+  z-index: 1;
+  .backbox {
+    z-index: -1;
+    .top {
+      .top-left {
+        background: url("@/assets/twbackbox/info-bg_top-left.png") no-repeat;
+        background-size: 100% 100%;
+      }
+      .top-mid {
+        background: url("@/assets/twbackbox/info-bg_top-mid.png") no-repeat;
+        background-size: 100% 100%;
+      }
+      .top-rig {
+        background: url("@/assets/twbackbox/info-bg_top-rig.png") no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .mid {
+      .mid-left {
+        background: url("@/assets/twbackbox/info-bg_mid-left.png") no-repeat;
+        background-size: 100% 100%;
+      }
+      .mid-mid {
+        background: url("@/assets/twbackbox/info-bg_mid-mid.png") no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .mid-rig {
+        background: url("@/assets/twbackbox/info-bg_mid-rig.png") no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .bot {
+      .bot-left {
+        background: url("@/assets/twbackbox/info-bg_bot-left.png") no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .bot-mid {
+        background: url("@/assets/twbackbox/info-bg_bot-mid.png") no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .bot-rig {
+        background: url("@/assets/twbackbox/info-bg_bot-rig.png") no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+  &:hover {
+    .backbox {
+      .top {
+        .top-left {
+          background: url("@/assets/twbackbox/info-bg_top-left_hover.png") no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        .top-mid {
+          background: url("@/assets/twbackbox/info-bg_top-mid_hover.png") no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        .top-rig {
+          background: url("@/assets/twbackbox/info-bg_top-rig_hover.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+  
+      .mid {
+        .mid-left {
+          background: url("@/assets/twbackbox/info-bg_mid-left_hover.png") no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        .mid-mid {
+          background: url("@/assets/twbackbox/info-bg_mid-mid_hover.png") no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        .mid-rig {
+          background: url("@/assets/twbackbox/info-bg_mid-rig_hover.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+  
+      .bot {
+        .bot-left {
+          background: url("@/assets/twbackbox/info-bg_bot-left_hover.png") no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        .bot-mid {
+          background: url("@/assets/twbackbox/info-bg_bot-mid_hover.png") no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        .bot-rig {
+          background: url("@/assets/twbackbox/info-bg_bot-rig_hover.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+}
+
+/** 信息框 -E */
+/** 弹出框 -S */
+.twbg-backbox-popup {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  padding: 1rem;
+
+  .backbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .top {
+      position: absolute;
+      float: left;
+      width: 100%;
+      height: 68px;
+
+      .top-left {
+        position: absolute;
+        float: left;
+        width: 70px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+
+      .top-mid {
+        float: left;
+        position: absolute;
+        left: 70px;
+        right: 60px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+
+      .top-rig {
+        float: right;
+        width: 60px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+    }
+
+    .mid {
+      position: absolute;
+      float: left;
+      width: 100%;
+      top: 68px;
+      bottom: 55px;
+
+      .mid-left {
+        position: absolute;
+        float: left;
+        width: 70px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+
+      .mid-mid {
+        float: left;
+        position: absolute;
+        left: 70px;
+        right: 60px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+
+      .mid-rig {
+        float: right;
+        width: 60px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+    }
+
+    .bot {
+      position: absolute;
+      float: left;
+      width: 100%;
+      height: 55px;
+      bottom: 0;
+
+      .bot-left {
+        position: absolute;
+        float: left;
+        width: 70px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+
+      .bot-mid {
+        float: left;
+        position: absolute;
+        left: 70px;
+        right: 60px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+
+      .bot-rig {
+        float: right;
+        width: 60px;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+    }
+  }
+
+  .tw-back-box__header {
+    height: 28px;
+    color: $twBackBoxColor;
+    font-size: 18px;
+  }
+}
+.twbg-backbox-popup {
+  z-index: 1;
+  
+    .backbox {
+      z-index: -1;
+  
+      .top {
+        .top-left {
+          background: url("@/assets/twbackbox/popup-bg_top-left.png") no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        .top-mid {
+          background: url("@/assets/twbackbox/popup-bg_top-mid.png") no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        .top-rig {
+          background: url("@/assets/twbackbox/popup-bg_top-rig.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+  
+      .mid {
+        .mid-left {
+          background: url("@/assets/twbackbox/popup-bg_mid-left.png") no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        .mid-mid {
+          background: url("@/assets/twbackbox/popup-bg_mid-mid.png") no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        .mid-rig {
+          background: url("@/assets/twbackbox/popup-bg_mid-rig.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+  
+      .bot {
+        .bot-left {
+          background: url("@/assets/twbackbox/popup-bg_bot-left.png") no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        .bot-mid {
+          background: url("@/assets/twbackbox/popup-bg_bot-mid.png") no-repeat;
+          background-size: 100% 100%;
+        }
+  
+        .bot-rig {
+          background: url("@/assets/twbackbox/popup-bg_bot-rig.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+}
+/** 弹出框 -E */

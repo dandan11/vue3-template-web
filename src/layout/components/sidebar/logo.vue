@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useNav } from "@/layout/hooks/useNav";
+import logoImg from "@/assets/common/logo.png";
 
 const props = defineProps({
   collapse: Boolean
@@ -18,17 +19,23 @@ const { title } = useNav();
         class="sidebar-logo-link"
         to="/"
       >
-        <FontIcon icon="team-iconlogo" svg style="width: 35px; height: 35px" />
+        <el-image style="width: 50px; height: 50px" :src="logoImg" />
+        <!-- <FontIcon icon="team-iconlogo" svg style="width: 35px; height: 35px" /> -->
         <span class="sidebar-title">{{ title }}</span>
       </router-link>
       <router-link
         v-else
         key="expand"
         :title="title"
-        class="sidebar-logo-link"
+        class="sidebar-logo-link flex items-center"
         to="/"
       >
-        <FontIcon icon="team-iconlogo" svg style="width: 35px; height: 35px" />
+        <el-image
+          style="width: 24px; height: 24px"
+          fit="cover"
+          :src="logoImg"
+        />
+        <!-- <FontIcon icon="team-iconlogo" svg style="width: 35px; height: 35px" /> -->
         <span class="sidebar-title">{{ title }}</span>
       </router-link>
     </transition>
@@ -60,7 +67,7 @@ const { title } = useNav();
       color: #1890ff;
       font-weight: 600;
       font-size: 20px;
-      margin-top: 10px;
+      // margin-top: 10px;
       font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
     }
   }

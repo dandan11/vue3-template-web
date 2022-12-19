@@ -1,6 +1,7 @@
 .el-breadcrumb__inner,
 .el-breadcrumb__inner a {
   font-weight: 400 !important;
+  color: $menuText !important;
 }
 
 .el-upload {
@@ -70,36 +71,36 @@
 }
 
 /* 全局覆盖element-plus的el-dialog、el-drawer、el-message-box、el-notification组件右上角关闭图标的样式，表现更鲜明 */
-.el-dialog__headerbtn,
-.el-message-box__headerbtn {
-  &:hover {
-    .el-dialog__close {
-      color: var(--el-color-info) !important;
-    }
-  }
-}
-.el-icon {
-  &.el-dialog__close,
-  &.el-drawer__close,
-  &.el-message-box__close,
-  &.el-notification__closeBtn {
-    width: 24px;
-    height: 24px;
-    outline: none;
-    border-radius: 4px;
-    transition: background-color 0.2s, color 0.2s;
-    &:hover {
-      color: rgba(0, 0, 0, 0.88) !important;
-      background-color: rgba(0, 0, 0, 0.06);
-      text-decoration: none;
-    }
-  }
-}
+// .el-dialog__headerbtn,
+// .el-message-box__headerbtn {
+//   &:hover {
+//     .el-dialog__close {
+//       color: var(--el-color-info) !important;
+//     }
+//   }
+// }
+// .el-icon {
+//   &.el-dialog__close,
+//   &.el-drawer__close,
+//   &.el-message-box__close,
+//   &.el-notification__closeBtn {
+//     width: 24px;
+//     height: 24px;
+//     outline: none;
+//     border-radius: 4px;
+//     transition: background-color 0.2s, color 0.2s;
+//     &:hover {
+//       color: rgba(0, 0, 0, 0.88) !important;
+//       background-color: rgba(0, 0, 0, 0.06);
+//       text-decoration: none;
+//     }
+//   }
+// }
 
 /* 克隆并自定义 ElMessage 样式，不会影响 ElMessage 原本样式，在 src/utils/message.ts 中调用自定义样式 ElMessage 方法即可，暗黑模式在 src/style/dark.scss 文件进行了适配 */
-.pure-message {
+.tw-message {
   border-width: 0 !important;
-  background: #fff !important;
+  background: $subMenuActiveBg !important;
   padding: 10px 13px !important;
   box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014,
     0 9px 28px 8px #0000000d !important;
@@ -109,7 +110,7 @@
   }
 
   & .el-message__content {
-    color: #000000d9 !important;
+    color: $themeTextColor !important;
     pointer-events: all !important;
     background-image: initial !important;
   }
@@ -126,6 +127,152 @@
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.06);
+    }
+  }
+}
+.el-input__wrapper {
+  background-color: $menuBg;
+  border: 1px solid var(--el-color-primary);
+  box-shadow: none !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: 1px solid var(--el-color-primary-light-2);
+  }
+}
+
+.el-input__wrapper.is-focus {
+  border: 1px solid var(--el-color-primary-light-5);
+}
+
+.el-input__inner {
+  background-color: $menuBg;
+  color: $themeTextColor;
+}
+
+.el-input__wrapper:hover {
+  box-shadow: none;
+}
+
+.el-dialog {
+  background: $subMenuActiveBg;
+  border: 1px solid #4db8ff;
+
+  .el-dialog__header {
+    background: $menuBg;
+    margin-right: 0;
+
+    .el-dialog__title {
+      color: $themeTextColor;
+    }
+  }
+
+  .el-dialog__body {
+    color: $themeTextColor;
+  }
+}
+
+.el-notification {
+  background-color: $subMenuActiveBg;
+  border: none !important;
+
+  &.twNotifiSuccess {
+    &:before {
+      background-color: var(--el-color-success);
+    }
+
+    .el-notification__title {
+      color: var(--el-color-success);
+    }
+  }
+
+  &.twNotifiInfo {
+    &:before {
+      background-color: var(--el-color-info);
+    }
+
+    .el-notification__title {
+      color: var(--el-color-info);
+    }
+  }
+
+  &.twNotifiWaring {
+    &:before {
+      background-color: var(--el-color-warning);
+    }
+
+    .el-notification__title {
+      color: var(--el-color-warning);
+    }
+  }
+
+  &.twNotifiError {
+    &:before {
+      background-color: var(--el-color-error);
+    }
+
+    .el-notification__title {
+      color: var(--el-color-error);
+    }
+  }
+
+  &:before {
+    content: "";
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .el-notification__content {
+    color: $themeTextColor;
+  }
+}
+
+.el-table {
+  background-color: $menuBg;
+  color: $themeTextColor;
+
+  th.el-table__cell {
+    background-color: #0c1c2c !important;
+
+    &.is-leaf {
+      border-bottom: none !important;
+    }
+  }
+
+  tr {
+    background-color: $menuBg !important;
+
+    &:hover {
+      border: 1px solid #fffc;
+    }
+
+    &:hover>td.el-table__cell {
+      background-color: $menuBg !important;
+    }
+
+    // &:hover.el-table__row--striped {
+    //   border: 1px solid red;
+    // }
+    &.el-table__row--striped td.el-table__cell {
+      background-color: $subMenuActiveBg !important;
+    }
+  }
+
+  td.el-table__cell {
+    border-bottom: none !important;
+  }
+
+  .el-scrollbar__view {
+    padding: 0 !important;
+  }
+
+  .el-table__inner-wrapper {
+    &::before {
+      background-color: transparent !important;
     }
   }
 }

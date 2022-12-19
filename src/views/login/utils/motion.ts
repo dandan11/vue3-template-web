@@ -30,7 +30,8 @@ export default defineComponent({
               y: 0,
               transition: {
                 delay
-              }
+              },
+              marginTop: '50px'
             }
           }
         ]

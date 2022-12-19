@@ -44,14 +44,14 @@
   display: flex;
   align-items: center;
   color: var(--el-text-color-primary);
-  background: #fff;
+  background: $menuBg;
   position: relative;
   box-shadow: 0 0 1px #888;
 
   .scroll-item {
     border-radius: 3px 3px 0 0;
     padding: 0 6px;
-    box-shadow: 0 0 1px #888;
+    box-shadow: 0 0 1px $menuText;
     position: relative;
     margin-right: 4px;
     height: 28px;
@@ -92,7 +92,7 @@
 
   a {
     text-decoration: none;
-    color: var(--el-text-color-primary);
+    color: $menuText;
     padding: 0 4px;
   }
 

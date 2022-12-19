@@ -142,6 +142,15 @@ emitter.on("openPanel", () => {
   align-items: center;
   top: 15px;
   margin-left: 10px;
+  svg {
+    font-size: 20px;
+    margin-right: 20px;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--el-color-primary);
+    }
+  }
 }
 
 :deep(.el-divider--horizontal) {

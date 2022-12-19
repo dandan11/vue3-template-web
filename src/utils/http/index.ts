@@ -145,6 +145,11 @@ class PureHttp {
     );
   }
 
+  /** 请求错误处理 */
+  private httpHandleCatchError(err): void {
+    throw new Error(err)
+  }
+
   /** 通用请求工具函数 */
   public request<T>(
     method: RequestMethods,
@@ -167,6 +172,8 @@ class PureHttp {
           resolve(response);
         })
         .catch(error => {
+          console.log('error', error);
+          this.httpHandleCatchError(error);
           reject(error);
         });
     });

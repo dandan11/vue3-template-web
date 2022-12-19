@@ -1,7 +1,7 @@
 import { http } from "@/utils/http";
+import { CommonResult } from "./type";
 
-type Result = {
-  success: boolean;
+interface Result extends CommonResult {
   data: Array<any>;
 };
 

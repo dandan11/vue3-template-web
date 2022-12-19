@@ -40,16 +40,17 @@ const {
 
     <div v-if="layout === 'vertical'" class="vertical-header-right">
       <!-- 菜单搜索 -->
-      <Search />
+      <!-- <Search /> -->
       <!-- 通知 -->
-      <Notice id="header-notice" />
+      <!-- <Notice id="header-notice" /> -->
       <!-- 退出登录 -->
       <el-dropdown trigger="click">
         <span class="el-dropdown-link navbar-bg-hover select-none">
-          <img
+          <!-- <img
             src="https://avatars.githubusercontent.com/u/44761321?v=4"
             :style="avatarsStyle"
-          />
+          /> -->
+          <IconifyIconOnline icon="ri:user-fill" width="24"></IconifyIconOnline>
           <p v-if="username" class="dark:text-white">{{ username }}</p>
         </span>
         <template #dropdown>
@@ -80,6 +81,7 @@ const {
   width: 100%;
   height: 48px;
   overflow: hidden;
+  background-color: $menuBg;
 
   .hamburger-container {
     line-height: 48px;
@@ -103,7 +105,7 @@ const {
       align-items: center;
       justify-content: space-around;
       cursor: pointer;
-      color: #000000d9;
+      color: $menuText;
 
       p {
         font-size: 14px;
@@ -114,6 +116,9 @@ const {
         height: 22px;
         border-radius: 50%;
       }
+    }
+    .set-icon {
+      color: $menuText;
     }
   }
 

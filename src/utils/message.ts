@@ -71,7 +71,7 @@ const message = (
       appendTo,
       grouping,
       // 全局搜 pure-message 即可知道该类的样式位置
-      customClass: customClass === "antd" ? "pure-message" : "",
+      customClass: customClass === "antd" ? "tw-message" : "",
       onClose: () => (isFunction(onClose) ? onClose() : null)
     });
   }

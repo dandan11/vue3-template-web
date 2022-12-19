@@ -1,7 +1,7 @@
 import { http } from "@/utils/http";
+import { CommonResult } from "./type";
 
-export type UserResult = {
-  success: boolean;
+export interface UserResult extends CommonResult {
   data: {
     /** 用户名 */
     username: string;
@@ -16,8 +16,7 @@ export type UserResult = {
   };
 };
 
-export type RefreshTokenResult = {
-  success: boolean;
+export interface RefreshTokenResult extends CommonResult {
   data: {
     /** `token` */
     accessToken: string;
