@@ -50,7 +50,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .frame {
-  height: calc(100vh - 88px);
+  height: calc(100vh - 97px);
   z-index: 998;
 
   .frame-iframe {

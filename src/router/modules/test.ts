@@ -39,6 +39,15 @@ export default {
       meta: {
         title: "弹出框测试"
       }
+    },
+    {
+      path: "/test/form",
+      name: "TestForm",
+      component: () => import("@/views/test/testForm/index.vue"),
+      meta: {
+        title: "测试表单"
+      }
     }
   ]
-};
+} as RouteConfigsTable;
+

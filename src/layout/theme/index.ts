@@ -33,21 +33,22 @@ const themeColors = {
     themeTextColor: "#000",
     themeTextHoverColor: "#fffc",
     twBackBoxColor: "#5deefe"
-  },
-  dusk: {
-    subMenuActiveText: "#fff",
-    menuBg: "#2a0608",
-    menuHover: "#e13c39",
-    subMenuBg: "#000",
-    subMenuActiveBg: "#e13c39",
-    menuText: "rgb(254 254 254 / 65.1%)",
-    sidebarLogo: "#42090c",
-    menuTitleHover: "#fff",
-    menuActiveBefore: "#e13c39",
-    themeTextColor: "#fffc",
-    themeTextHoverColor: "#000",
-    twBackBoxColor: "#5deefe"
   }
+  // ,
+  // dusk: {
+  //   subMenuActiveText: "#fff",
+  //   menuBg: "#2a0608",
+  //   menuHover: "#e13c39",
+  //   subMenuBg: "#000",
+  //   subMenuActiveBg: "#e13c39",
+  //   menuText: "rgb(254 254 254 / 65.1%)",
+  //   sidebarLogo: "#42090c",
+  //   menuTitleHover: "#fff",
+  //   menuActiveBefore: "#e13c39",
+  //   themeTextColor: "#fffc",
+  //   themeTextHoverColor: "#000",
+  //   twBackBoxColor: "#5deefe"
+  // }
   // volcano: {
   //   subMenuActiveText: "#fff",
   //   menuBg: "#2b0e05",

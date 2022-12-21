@@ -78,7 +78,12 @@ const openMessageWarnInfo = () => {
         </el-button>
       </template>
     </CommonDialogBox>
-    <el-dialog v-model="dialogDefaultVisible" title="提示" width="30%">
+    <el-dialog
+      v-model="dialogDefaultVisible"
+      class="tw-el-dialog"
+      title="提示"
+      width="30%"
+    >
       <span>这是一个确认信息</span>
       <template #footer>
         <span class="dialog-footer">

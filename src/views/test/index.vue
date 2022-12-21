@@ -84,5 +84,6 @@ onMounted(() => {
 <style lang="scss" scoped>
 .treebox {
   // margin: 2px 0 0;
+  height: 100%;
 }
 </style>

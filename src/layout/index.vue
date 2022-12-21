@@ -152,7 +152,7 @@ const layoutHeader = defineComponent({
     />
     <div
       :class="[
-        'main-container',
+        'main-container-wrap',
         pureSetting.hiddenSideBar ? 'main-hidden' : ''
       ]"
     >
@@ -164,7 +164,7 @@ const layoutHeader = defineComponent({
       <el-scrollbar v-else>
         <el-backtop
           title="回到顶部"
-          target=".main-container .el-scrollbar__wrap"
+          target=".main-container-wrap .el-scrollbar__wrap"
         >
           <backTop />
         </el-backtop>

@@ -1,0 +1,13 @@
+{
+	"快速键入方法注释": {
+	  "prefix": "/**", //这里是快捷键方法
+	  "body": [
+		"/**",
+		"* @description 描述",
+		"* @param 参数变量名 | 参数描述",
+		"* @returns {返回类型}",
+		"*/"
+	  ],
+	  "description": "notes for function"
+	}
+}

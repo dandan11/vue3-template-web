@@ -22,6 +22,9 @@ import "element-plus/dist/index.css";
 import "./assets/iconfont/iconfont.js";
 import "./assets/iconfont/iconfont.css";
 
+import VForm3 from 'vform3-builds'  //引入VForm 3库
+import 'vform3-builds/dist/designer.style.css'  //引入VForm3样式
+
 const app = createApp(App);
 
 // 自定义指令
@@ -49,7 +52,7 @@ getServerConfig(app).then(async config => {
   await router.isReady();
   injectResponsiveStorage(app, config);
   setupStore(app);
-  app.use(MotionPlugin).use(ElementPlus);
+  app.use(MotionPlugin).use(ElementPlus).use(VForm3);
   // .use(useEcharts);
   // .use(Table);
   // .use(PureDescriptions);

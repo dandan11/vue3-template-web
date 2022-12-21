@@ -16,9 +16,10 @@ export function useDataThemeChange() {
     /* 道奇蓝（默认） */
     { color: "#0d87dd", themeColor: "default" },
     /* 亮白色 */
-    { color: "#ffffff", themeColor: "light" },
-    /* 猩红色 */
-    { color: "#f5222d", themeColor: "dusk" }
+    { color: "#ffffff", themeColor: "light" }
+    // ,
+    // /* 猩红色 */
+    // { color: "#f5222d", themeColor: "dusk" }
     // ,
     // /* 橙红色 */
     // { color: "#fa541c", themeColor: "volcano" },
@@ -52,12 +53,12 @@ export function useDataThemeChange() {
       epThemeColor: $storage.layout?.epThemeColor
     };
 
-    // if (theme === "default" || theme === "light") {
-    //   setEpThemeColor(getConfig().EpThemeColor);
-    // } else {
+    if (theme === "default" || theme === "light") {
+      setEpThemeColor(getConfig().EpThemeColor);
+    } else {
       const colors = themeColors.value.find(v => v.themeColor === theme);
       setEpThemeColor(colors.color);
-    // }
+    }
   }
 
   function setPropertyPrimary(mode: string, i: number, color: string) {

@@ -130,32 +130,40 @@
     }
   }
 }
+/** el-input全局样式 -S */
 .el-input__wrapper {
   background-color: $menuBg;
-  border: 1px solid var(--el-color-primary);
-  box-shadow: none !important;
+  // border: 1px solid var(--el-color-primary);
+  --el-input-border-color: #8888884d;
 
-  &:hover,
-  &:active,
-  &:focus {
-    border: 1px solid var(--el-color-primary-light-2);
-  }
+  // &:hover,
+  // &:active,
+  // &:focus {
+  //   border: 1px solid var(--el-color-primary-light-2);
+  // }
 }
 
-.el-input__wrapper.is-focus {
-  border: 1px solid var(--el-color-primary-light-5);
-}
+// .el-input__wrapper.is-focus {
+//   border: 1px solid var(--el-color-primary-light-5);
+// }
 
-.el-input__inner {
+// .el-input__inner {
+
+  
+//   background-color: $menuBg;
+//   color: $themeTextColor;
+// }
+
+// .el-input__wrapper:hover {
+//   box-shadow: none;
+// }
+.el-textarea__inner {
+  --el-input-border-color: #8888884d;
   background-color: $menuBg;
-  color: $themeTextColor;
 }
-
-.el-input__wrapper:hover {
-  box-shadow: none;
-}
-
-.el-dialog {
+/** el-input全局样式 -E */
+/** el-dialog全局样式 -S */
+.tw-el-dialog {
   background: $subMenuActiveBg;
   border: 1px solid #4db8ff;
 
@@ -173,6 +181,8 @@
   }
 }
 
+/** el-dialog全局样式 -E */
+/** el-notification全局样式 -S */
 .el-notification {
   background-color: $subMenuActiveBg;
   border: none !important;
@@ -230,7 +240,8 @@
     color: $themeTextColor;
   }
 }
-
+/** el-notification全局样式 -E */
+/** el-table 表格样式 -S */
 .el-table {
   background-color: $menuBg;
   color: $themeTextColor;
@@ -276,3 +287,15 @@
     }
   }
 }
+
+/** el-table 表格样式 -E */
+/** el-card 卡片样式 -S */
+.el-card {
+  --el-card-bg-color: $menuBg!important;
+  --el-text-color-primary: $textThemeColor;
+  --el-card-border-color: #8888884d!important;
+}
+.el-divider--horizontal {
+  --el-border-color:#8888884d !important;
+}
+/** el-card 卡片样式 -E */

@@ -56,6 +56,8 @@ const onQueryChanged = (query: string) => {
 const filterMethod = (query: string, node: treeNode) => {
   return node.label!.indexOf(query) !== -1;
 };
+
+const heightStyle = document.documentElement.clientHeight - 200;
 </script>
 
 <template>
@@ -69,8 +71,8 @@ const filterMethod = (query: string, node: treeNode) => {
     ref="treeRef"
     :data="data"
     :props="props"
+    :height="heightStyle"
     :show-checkbox="showCheckbox"
-    :height="500"
     :filter-method="filterMethod"
     :default-expanded-keys="expandedKeys"
     :default-checked-keys="defaultCheckedKeys"
@@ -88,6 +90,7 @@ const filterMethod = (query: string, node: treeNode) => {
   background: $menuBg;
   color: $themeTextColor;
   margin-top: 10px;
+  height: calc(100% - 42px);
 }
 </style>
 <style>

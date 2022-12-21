@@ -96,3 +96,21 @@ export default defineComponent({
   }
 });
 </script>
+
+<style>
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(16, 31, 28, 0.25);
+  background-clip: padding-box;
+  min-height: 28px;
+  border-radius: 2em;
+}
+[data-v-7058fcb5]::-webkit-scrollbar-track {
+  width: 8px;
+  background: rgba(16, 31, 28, 0.1);
+  border-radius: 2em;
+}
+</style>

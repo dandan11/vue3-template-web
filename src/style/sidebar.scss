@@ -31,7 +31,7 @@
     justify-content: center;
   }
 
-  .main-container {
+  .main-container-wrap {
     height: 100vh;
     min-height: 100%;
     /* main-content 属性动画 */
@@ -41,13 +41,13 @@
     background: $menuBg;
     color: $themeTextColor;
 
-    .el-scrollbar__wrap,
-    .el-scrollbar__view {
+    .el-scrollbar__wrap {
       overflow: auto;
       height: 100%;
     }
   
     .el-scrollbar__view {
+      height: 100%;
       padding: 5px;
     }
   }
@@ -495,7 +495,7 @@
       transition: width var(--pure-transition-duration);
     }
 
-    .main-container {
+    .main-container-wrap {
       margin-left: 0 !important;
     }
 
@@ -541,7 +541,7 @@ body[layout="vertical"] {
       }
     }
 
-    .main-container {
+    .main-container-wrap {
       margin-left: 54px;
     }
 
@@ -625,7 +625,7 @@ body[layout="mix"] {
       }
     }
 
-    .main-container {
+    .main-container-wrap {
       margin-left: 54px;
     }
 

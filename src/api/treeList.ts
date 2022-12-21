@@ -9,5 +9,5 @@ interface Result extends CommonResult {
 
 /** 树列表 */
 export const getTreeList = () => {
-  return http.request<Result>("post", "/getTreeLis1t");
+  return http.request<Result>("post", "/getTreeList");
 };
