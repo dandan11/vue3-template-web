@@ -9,8 +9,8 @@ defineOptions({
   name: "TwTreeTest"
 });
 
-const expandedKeys = ["node-1"];
-const defaultCheckedKeys = ["node-1-1"];
+const expandedKeys: any[] = ["node-1"];
+const defaultCheckedKeys: any[] = ["node-1-1"];
 
 // interface Tree {
 //   id: string;
@@ -46,13 +46,13 @@ const defaultCheckedKeys = ["node-1-1"];
 //     });
 // };
 // const data = createData(2, 10, 40);
-const dataList = ref([]);
+const dataList = ref<[]>([]);
 
 const getTreeListData = async () => {
   try {
     const { data } = await getTreeList();
     dataList.value = data.list;
-    console.log(data);
+    console.log(dataList);
   } catch (e) {
     console.log(e);
   } finally {

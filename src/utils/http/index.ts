@@ -147,7 +147,7 @@ class PureHttp {
 
   /** 请求错误处理 */
   private httpHandleCatchError(err): void {
-    throw new Error(err)
+    console.log("捕获错误"+err)
   }
 
   /** 通用请求工具函数 */
