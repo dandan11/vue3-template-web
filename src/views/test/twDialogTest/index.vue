@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { CommonDialogBox } from "@/components/CommonDialogBox";
 import { notifiMessage, MessageParams } from "@/utils/notifiMessage";
+import { CommonBgButton } from "@/components/CommonBgButton";
 import { message } from "@/utils/message";
 
 import { ref } from "vue";
@@ -38,11 +39,25 @@ const openMessageSuccessInfo = () => {
 const openMessageWarnInfo = () => {
   message("这是一个简单的提示框", { type: "warning" });
 };
+
+const imgBg = new URL("@/assets/common/tab_switch.png", import.meta.url).href;
+const imgBgHover = new URL(
+  "@/assets/common/tab_switch-selected.png",
+  import.meta.url
+).href;
+const commonBgButtonRef = ref(null);
+const handleMouseenter = () => {
+  commonBgButtonRef.value.handleMouseenter();
+};
+const handleMouseleave = () => {
+  commonBgButtonRef.value.handleMouseleave();
+};
 </script>
 
 <template>
   <div class="h-full w-full">
     <!-- <h4 class="my-4">弹出框</h4> -->
+
     <el-button @click="dialogFormVisible = true" type="primary">
       打开系统风格弹出框
     </el-button>
@@ -94,7 +109,44 @@ const openMessageWarnInfo = () => {
         </span>
       </template>
     </el-dialog>
+    <CommonBgButton
+      ref="commonBgButtonRef"
+      height="50px"
+      width="100px"
+      text="提交"
+      :imgBg="imgBg"
+      :imgBgHover="imgBgHover"
+      @mouseenter="handleMouseenter"
+      @mouseleave="handleMouseleave"
+    ></CommonBgButton>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.common-btn {
+  height: 46px;
+  width: 120px;
+  position: relative;
+  .img-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+</style>
